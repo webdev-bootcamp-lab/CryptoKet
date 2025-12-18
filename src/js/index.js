@@ -30,8 +30,8 @@ if (sellersContainer && prevBtn && nextBtn) {
 }
 
 // Load More / See Less Functionality
-const loadMoreBtn = document.querySelector('.bg-transparent.border-2.border-\\[\\#FF4191\\]');
-const nftGrid = document.querySelector('.grid.grid-cols-1');
+const loadMoreBtn = document.getElementById('load-more-btn');
+const nftGrid = document.getElementById('nft-grid');
 let isExpanded = false;
 let clonedCards = [];
 
@@ -39,7 +39,7 @@ if (loadMoreBtn && nftGrid) {
   loadMoreBtn.addEventListener("click", function () {
     if (!isExpanded) {
       // Load More - Duplicate the cards
-      const allCards = Array.from(nftGrid.children).filter(card => !card.classList.contains('load-more-btn'));
+      const allCards = Array.from(nftGrid.children);
       
       // Clone each card and store references
       allCards.forEach(card => {
@@ -66,10 +66,13 @@ if (loadMoreBtn && nftGrid) {
       isExpanded = false;
       
       // Scroll to Hot Bids section
-      document.querySelector('section.mb-12:nth-of-type(2) h2').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      const hotBidsSection = document.querySelector('section.mb-12:nth-of-type(2)');
+      if (hotBidsSection) {
+        hotBidsSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
   });
 }
