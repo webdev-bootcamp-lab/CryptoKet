@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+body{
+    background-color: rgb(45, 44, 44);
+}
+.image1 img{
+    width: 300px;
+    margin-left: 36px;
+    margin-top: 30px;
+    padding-bottom: 60px;
+}
+.hero-section-test{
+    margin-left: 30px;
+    border-top: solid 1px #44454b;
+    padding: 20px;
+}
+.abstact button{
+    font-size: medium;
+    width: 60px;
+    background-color: transparent;
+    height: 35px;
+    border: solid 1px rgb(95, 94, 94);
+    border-radius: 25px;
+    margin-top: 45px;
+    cursor: pointer;
+}
+button span{
+    margin-left: 10px;
+}
+.abstact{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.abstact-title{
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 50px;
+}
+.available-section{
+    font-size: 10px;
+    margin-top:4px;
+    color: rgb(210, 205, 205);
+}
+.creater{
+    margin-top: 35px;
+    color: rgb(210, 205, 205);
+}
+span{
+    font-weight: 700;
+}
+.image2{
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+.mia-ayana{
+    margin-top: 20px;
+    font-weight: 600;
+}
+.links-section{
+    margin-top: 30px;
+    border-bottom: solid 1px #3a3a3e;
+    padding-bottom: 10px;
+}
+a{
+     text-decoration: none;
+     color: rgb(212, 211, 211);
+     font-weight: 600;
+     padding: 10px 12px 10px 0px ;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #fff;
+    border-bottom: solid 1px #fff;
+}
+.dummy-test{
+    margin-top: 30px;
+    font-size: 11px;
+    line-height: 22px; 
+}
+.btn{
+    margin-top: 30px;
+    padding: 0px 0px 30px 0px;  
+}
+.buy-for{
+    width: 120px;
+    height: 35px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #EB1484, #C91CC3);
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.make-offer {
+    width: 120px;
+    height: 35px;
+    margin-left: 20px;
+    border: 0.8px solid transparent;
+    border-radius: 8px;
+    background:
+        linear-gradient(#2D2C2C, #2D2C2C) padding-box,
+        linear-gradient(to right, #EB1484, #ee34e5) border-box;
+    color: #d9418f;
+    font-weight: 600;
+    cursor: pointer;
+}
+@media(min-width: 600px) and (max-width:899px){
+    .image1 img{
+    width: 650px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.hero-section-test{
+    margin-left: 70px;
+    margin-top: 100px;
+}
+.abstact button{
+    font-size: 32px;
+    width: 130px;
+    background-color: transparent;
+    height: 65px;
+    border-radius: 25px;
+    margin-top: 45px;
+}
+.abstact{
+    gap: 40px;
+}
+.abstact-title{
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: 50px;
+}
+.available-section{
+    font-size: 18px;
+    margin-top: 12px;
+}
+.creater{
+    margin-top: 55px;
+    font-size: 30px;
+}
+.main{
+    background-color: rgb(45, 44, 44);
+}
+.image2{
+    margin-top: 40px;
+    gap: 20px;
+}
+.image2 img{
+    width: 110px;
+}
+.mia-ayana{
+    margin-top: 50px;
+    font-size: 30px;
+}
+.links-section{
+    margin-top: 50px;
+}
+a{
+    padding: 10px 12px 10px 0px ;
+    font-size: 35px;
+}
+a:hover{
+    border-bottom: solid 2px;
+}
+.dummy-test{
+    margin-top: 70px;
+    font-size: 24px;
+    line-height: 43px; 
+}
+.btn{
+    margin-top: 70px;
+    padding: 0px 0px 50px 0px;  
+}
+.buy-for{
+    width: 250px;
+    height: 55px;
+    font-size: 22px;
+}
+.make-offer {
+    border: 1px solid transparent;
+    width: 250px;
+    height: 55px;
+    margin-left: 40px;
+    color: #d9418f;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 25px;
+}
+}
+@media(min-width: 769px){
+.main{
+    display: flex;
+    gap: 80px;
+    border-top: solid 1.8px #44454b;
+    border-bottom: solid 1.8px #44454b;
+ }
+.image1 img{
+    width: 500px;
+    margin-top: 110px;
+}
+.abstact-title{
+    font-size: 30px;
+}
+.available-section{
+    font-size: 16px;
+}
+.creater{
+    font-size: 22px;
+}
+.links-section{
+    font-size: 20px;
+}
+.dummy-test{
+    font-size: 17px;
+    line-height: 30px;
+}
+.buy-for{
+    width: 190px;
+}
+.make-offer{
+    width: 190px;
+}
+.hero-section-test{
+    border-left: solid 1.8px #3a3a3e;
+    padding-left: 40px;
+    border-top: none;
+}
+}
