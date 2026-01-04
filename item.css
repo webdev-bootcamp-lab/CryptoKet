@@ -99,6 +99,7 @@ a:hover{
     color: white;
     font-weight: 600;
     cursor: pointer;
+    font-size: 12px;
 }
 .make-offer {
     width: 120px;
@@ -223,11 +224,9 @@ a:hover{
     font-size: 17px;
     line-height: 30px;
 }
-.buy-for{
+.buy-for, .make-offer{
     width: 190px;
-}
-.make-offer{
-    width: 190px;
+    font-size: 16px;
 }
 .hero-section-test{
     border-left: solid 1.8px #3a3a3e;
