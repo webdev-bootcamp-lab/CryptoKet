@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoKet - Discover, Collect, and Sell Extraordinary NFTs</title>
+    <meta
+      name="description"
+      content="CryptoKet is the premier NFT marketplace for discovering, collecting, and selling extraordinary digital art and collectibles."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./src/css/output.css" />
+
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Hide scrollbar */
+      .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollbar-hidden {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-[#1a1a2e] via-[#1a1a2e] to-[#1a1a2e] text-white min-h-screen"
+  >
+    <div class="mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 pb-16">
+      <!-- Hero Banner -->
+      <section class="mb-12">
+        <div
+          class="bg-gradient-to-br from-[#FF006B] via-[#FF4191] to-[#C026D3] rounded-2xl p-6 sm:p-8 md:p-10 relative overflow-hidden"
+        >
+          <!-- Decorative Bubbles -->
+          <div
+            class="absolute -top-40 -left-40 w-[280px] h-[280px] bg-[rgba(255,255,255,0.25)] rounded-full"
+          ></div>
+          <div
+            class="absolute -bottom-10 -right-15 top-12 w-[320px] h-[320px] bg-[rgba(255,255,255,0.22)] rounded-full"
+          ></div>
+
+          <h1
+            class="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight relative z-10"
+          >
+            Discover, collect, and sell<br />extraordinary NFTs
+          </h1>
+        </div>
+      </section>
+
+      <!-- Top Sellers Section -->
+      <section class="mb-12">
+        <h2 class="text-lg sm:text-xl font-bold mb-4">Top Sellers</h2>
+
+        <!-- Carousel Container -->
+        <div class="relative">
+          <!-- Left Arrow -->
+          <button
+            class="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-[rgba(255,255,255,0.1)] border border-white/20 items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.2)] hover:scale-110 text-white text-2xl"
+            id="sellers-prev"
+          >
+            ‹
+          </button>
+
+          <!-- Scrollable Container -->
+          <div
+            class="overflow-x-auto scrollbar-hidden px-0 md:px-12 md:relative md:-left-3"
+            id="sellers-container"
+          >
+            <div class="flex gap-4 sm:gap-6 py-2">
+              <!-- Seller Card 1 -->
+              <div
+                class="flex-shrink-0 text-center bg-[#2A2D3A] rounded-xl p-4 min-w-[160px] relative"
+              >
+                <!-- Ranking Badge -->
+                <span
+                  class="absolute top-2 left-2 bg-gradient-to-br from-[#FF006B] to-[#C026D3] w-6 h-6 rounded-full flex items-center justify-center border-2 border-[#2A2D3A] text-xs font-bold p-3"
+                  >1</span
+                >
+                <div class="relative inline-block mb-3 mt-6">
+                  <div class="w-16 h-16 rounded-full overflow-hidden">
+                    <img
+                      src="./src/assets/images/topseller/seller1.png"
+                      alt="Mia Ayana"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <!-- Online Status Indicator -->
+                  <span
+                    class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-[#2A2D3A] flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      class="w-2 h-2"
+                    >
+                      <path
+                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="font-semibold text-sm mb-0.5">Mia Ayana</div>
+                <div class="text-white/60 text-xs">
+                  <span class="text-white">5.250</span> ETH
+                </div>
+              </div>
+
+              <!-- Seller Card 2 -->
+              <div
+                class="flex-shrink-0 text-center bg-[#2A2D3A] rounded-xl p-4 min-w-[160px] relative"
+              >
+                <!-- Ranking Badge -->
+                <span
+                  class="absolute top-2 left-2 bg-gradient-to-br from-[#FF006B] to-[#C026D3] w-6 h-6 rounded-full flex items-center justify-center border-2 border-[#2A2D3A] text-xs font-bold p-3"
+                  >2</span
+                >
+                <div class="relative inline-block mb-3 mt-6">
+                  <div class="w-16 h-16 rounded-full overflow-hidden">
+                    <img
+                      src="./src/assets/images/topseller/seller2.jpg"
+                      alt="Rian Leon"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span
+                    class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-[#2A2D3A] flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      class="w-2 h-2"
+                    >
+                      <path
+                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="font-semibold text-sm mb-0.5">Rian Leon</div>
+                <div class="text-white/60 text-xs">
+                  <span class="text-white">4.932</span> ETH
+                </div>
+              </div>
+
+              <!-- Seller Card 3 -->
+              <div
+                class="flex-shrink-0 text-center bg-[#2A2D3A] rounded-xl p-4 min-w-[160px] relative"
+              >
+                <!-- Ranking Badge -->
+                <span
+                  class="absolute top-2 left-2 bg-gradient-to-br from-[#FF006B] to-[#C026D3] w-6 h-6 rounded-full flex items-center justify-center border-2 border-[#2A2D3A] text-xs font-bold p-3"
+                  >3</span
+                >
+                <div class="relative inline-block mb-3 mt-6">
+                  <div class="w-16 h-16 rounded-full overflow-hidden">
+                    <img
+                      src="./src/assets/images/topseller/seller3.png"
+                      alt="Lady Young"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span
+                    class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-[#2A2D3A] flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      class="w-2 h-2"
+                    >
+                      <path
+                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="font-semibold text-sm mb-0.5">Lady Young</div>
+                <div class="text-white/60 text-xs">
+                  <span class="text-white">4.620</span> ETH
+                </div>
+              </div>
+
+              <!-- Seller Card 4 -->
+              <div
+                class="flex-shrink-0 text-center bg-[#2A2D3A] rounded-xl p-4 min-w-[160px] relative"
+              >
+                <!-- Ranking Badge -->
+                <span
+                  class="absolute top-2 left-2 bg-gradient-to-br from-[#FF006B] to-[#C026D3] w-6 h-6 rounded-full flex items-center justify-center border-2 border-[#2A2D3A] text-xs font-bold p-3"
+                  >4</span
+                >
+                <div class="relative inline-block mb-3 mt-6">
+                  <div class="w-16 h-16 rounded-full overflow-hidden">
+                    <img
+                      src="./src/assets/images/topseller/seller4.png"
+                      alt="Black Glass"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span
+                    class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-[#2A2D3A] flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      class="w-2 h-2"
+                    >
+                      <path
+                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="font-semibold text-sm mb-0.5">Black Glass</div>
+                <div class="text-white/60 text-xs">
+                  <span class="text-white">4.125</span> ETH
+                </div>
+              </div>
+
+              <!-- Seller Card 5 -->
+              <div
+                class="flex-shrink-0 text-center bg-[#2A2D3A] rounded-xl p-4 min-w-[160px] relative"
+              >
+                <!-- Ranking Badge -->
+                <span
+                  class="absolute top-2 left-2 bg-gradient-to-br from-[#FF006B] to-[#C026D3] w-6 h-6 rounded-full flex items-center justify-center border-2 border-[#2A2D3A] text-xs font-bold p-3"
+                  >5</span
+                >
+                <div class="relative inline-block mb-3 mt-6">
+                  <div class="w-16 h-16 rounded-full overflow-hidden">
+                    <img
+                      src="./src/assets/images/topseller/seller5.png"
+                      alt="Budhiman"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span
+                    class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-[#2A2D3A] flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      class="w-2 h-2"
+                    >
+                      <path
+                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="font-semibold text-sm mb-0.5">Budhiman</div>
+                <div class="text-white/60 text-xs">
+                  <span class="text-white">3.921</span> ETH
+                </div>
+              </div>
+
+              <!-- Seller Card 6 -->
+              <div
+                class="flex-shrink-0 text-center bg-[#2A2D3A] rounded-xl p-4 min-w-[160px] relative"
+              >
+                <!-- Ranking Badge -->
+                <span
+                  class="absolute top-2 left-2 bg-gradient-to-br from-[#FF006B] to-[#C026D3] w-6 h-6 rounded-full flex items-center justify-center border-2 border-[#2A2D3A] text-xs font-bold p-3"
+                  >6</span
+                >
+                <div class="relative inline-block mb-3 mt-6">
+                  <div class="w-16 h-16 rounded-full overflow-hidden">
+                    <img
+                      src="./src/assets/images/topseller/seller6.png"
+                      alt="PixelPunk"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span
+                    class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-[#2A2D3A] flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      class="w-2 h-2"
+                    >
+                      <path
+                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="font-semibold text-sm mb-0.5">PixelPunk</div>
+                <div class="text-white/60 text-xs">
+                  <span class="text-white">6.790</span> ETH
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Arrow -->
+          <button
+            class="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-[rgba(255,255,255,0.1)] border border-white/20 items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.2)] hover:scale-110 text-white text-2xl"
+            id="sellers-next"
+          >
+            ›
+          </button>
+        </div>
+      </section>
+
+      <!-- Hot Bids Section -->
+      <section class="mb-12">
+        <h2 class="text-lg sm:text-xl font-bold mb-4">Hot Bids</h2>
+
+        <div
+          id="nft-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
+        >
+          <!-- NFT Card 1 -->
+          <div
+            class="bg-[#2A2D3A] rounded-2xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="p-4 sm:p-3">
+              <img
+                src="./src/assets/images/hotbid/hotbid1.png"
+                alt="Abstract Smoke Red Blue"
+                class="w-full aspect-square object-cover rounded-xl mb-3"
+              />
+              <div class="font-semibold text-sm mb-2">
+                Abstract Smoke Red Blue
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <div class="text-white/80">
+                  <span class="text-white">1.25</span>ETH
+                </div>
+                <div class="flex items-center gap-1 text-white/60">
+                  <span
+                    class="like-btn cursor-pointer transition-all duration-300 hover:scale-125"
+                    >♥</span
+                  >
+                  <span class="like-count">100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NFT Card 2 -->
+          <div
+            class="bg-[#2A2D3A] rounded-2xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="p-4 sm:p-3">
+              <img
+                src="./src/assets/images/hotbid/hotbid2.png"
+                alt="Mountain Landscape"
+                class="w-full aspect-square object-cover rounded-xl mb-3"
+              />
+              <div class="font-semibold text-sm mb-2">Mountain Landscape</div>
+              <div class="flex justify-between items-center text-xs">
+                <div class="text-white/80">
+                  <span class="text-white">0.20</span>ETH
+                </div>
+                <div class="flex items-center gap-1 text-white/60">
+                  <span
+                    class="like-btn cursor-pointer transition-all duration-300 hover:scale-125"
+                    >♥</span
+                  >
+                  <span class="like-count">220</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NFT Card 3 -->
+          <div
+            class="bg-[#2A2D3A] rounded-2xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="p-4 sm:p-3">
+              <img
+                src="./src/assets/images/hotbid/hotbid3.png"
+                alt="Paint Color on Wall"
+                class="w-full aspect-square object-cover rounded-xl mb-3"
+              />
+              <div class="font-semibold text-sm mb-2">Paint Color on Wall</div>
+              <div class="flex justify-between items-center text-xs">
+                <div class="text-white/80">
+                  <span class="text-white">0.55</span>ETH
+                </div>
+                <div class="flex items-center gap-1 text-white/60">
+                  <span
+                    class="like-btn cursor-pointer transition-all duration-300 hover:scale-125"
+                    >♥</span
+                  >
+                  <span class="like-count">65</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NFT Card 4 -->
+          <div
+            class="bg-[#2A2D3A] rounded-2xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="p-4 sm:p-3">
+              <img
+                src="./src/assets/images/hotbid/hotbid4.png"
+                alt="Abstract Pattern"
+                class="w-full aspect-square object-cover rounded-xl mb-3"
+              />
+              <div class="font-semibold text-sm mb-2">Abstract Pattern</div>
+              <div class="flex justify-between items-center text-xs">
+                <div class="text-white/80">
+                  <span class="text-white">0.87</span>ETH
+                </div>
+                <div class="flex items-center gap-1 text-white/60">
+                  <span
+                    class="like-btn cursor-pointer transition-all duration-300 hover:scale-125"
+                    >♥</span
+                  >
+                  <span class="like-count">82</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NFT Card 5 -->
+          <div
+            class="bg-[#2A2D3A] rounded-2xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="p-4 sm:p-3">
+              <img
+                src="./src/assets/images/hotbid/hotbid5.png"
+                alt="White Line Sketch"
+                class="w-full aspect-square object-cover rounded-xl mb-3"
+              />
+              <div class="font-semibold text-sm mb-2">White Line Grafiti</div>
+              <div class="flex justify-between items-center text-xs">
+                <div class="text-white/80">
+                  <span class="text-white">0.09</span>ETH
+                </div>
+                <div class="flex items-center gap-1 text-white/60">
+                  <span
+                    class="like-btn cursor-pointer transition-all duration-300 hover:scale-125"
+                    >♥</span
+                  >
+                  <span class="like-count">22</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NFT Card 6 -->
+          <div
+            class="bg-[#2A2D3A] rounded-2xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="p-4 sm:p-3">
+              <img
+                src="./src/assets/images/hotbid/hotbid6.png"
+                alt="Abstract Triangle"
+                class="w-full aspect-square object-cover rounded-xl mb-3"
+              />
+              <div class="font-semibold text-sm mb-2">Abstract Triangle</div>
+              <div class="flex justify-between items-center text-xs">
+                <div class="text-white/80">
+                  <span class="text-white">0.90</span>ETH
+                </div>
+                <div class="flex items-center gap-1 text-white/60">
+                  <span
+                    class="like-btn cursor-pointer transition-all duration-300 hover:scale-125"
+                    >♥</span
+                  >
+                  <span class="like-count">37</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NFT Card 7 -->
+          <div
+            class="bg-[#2A2D3A] rounded-2xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="p-4 sm:p-3">
+              <img
+                src="./src/assets/images/hotbid/hotbid7.png"
+                alt="Lake Landscape"
+                class="w-full aspect-square object-cover rounded-xl mb-3"
+              />
+              <div class="font-semibold text-sm mb-2">Lake Landscape</div>
+              <div class="flex justify-between items-center text-xs">
+                <div class="text-white/80">
+                  <span class="text-white">0.52</span>ETH
+                </div>
+                <div class="flex items-center gap-1 text-white/60">
+                  <span
+                    class="like-btn cursor-pointer transition-all duration-300 hover:scale-125"
+                    >♥</span
+                  >
+                  <span class="like-count">93</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NFT Card 8 -->
+          <div
+            class="bg-[#2A2D3A] rounded-2xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="p-4 sm:p-3">
+              <img
+                src="./src/assets/images/hotbid/hotbid8.png"
+                alt="Blue Red Art"
+                class="w-full aspect-square object-cover rounded-xl mb-3"
+              />
+              <div class="font-semibold text-sm mb-2">Blue Red Art</div>
+              <div class="flex justify-between items-center text-xs">
+                <div class="text-white/80">
+                  <span class="text-white">0.85</span>ETH
+                </div>
+                <div class="flex items-center gap-1 text-white/60">
+                  <span
+                    class="like-btn cursor-pointer transition-all duration-300 hover:scale-125"
+                    >♥</span
+                  >
+                  <span class="like-count">68</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <button
+          id="load-more-btn"
+          class="bg-transparent border-2 border-[#FF4191] text-[#FF4191] py-3 px-12 sm:px-20 md:px-40 rounded-xl font-semibold cursor-pointer transition-all duration-300 mt-12 sm:mt-16 md:mt-20 mx-auto block hover:bg-[#FF4191] hover:text-white hover:border-solid hover:-translate-y-0.5"
+        >
+          Load More
+        </button>
+      </section>
+    </div>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
