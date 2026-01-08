@@ -10,7 +10,6 @@
       rel="stylesheet"
     />
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -28,16 +27,17 @@
 
   <body class="bg-[#0b0b0f] text-white min-h-screen font-sans">
     <div class="max-w-3xl mx-auto px-6 py-12 space-y-10">
-      <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight font-sans">
         Create new item
       </h1>
 
-      <!-- Upload Area -->
+      <p class="text-sm font-medium text-gray-300 font-sans">Upload File</p>
+
       <div
         id="dropZone"
         class="border-2 bg-[#15151d] border-dashed border-gray-600 rounded-xl p-8 text-center cursor-pointer hover:border-pink-500 transition"
       >
-        <p class="text-xs sm:text-sm text-gray-400">
+        <p class="text-xs sm:text-sm text-gray-400 font-normal font-sans">
           JPG, PNG, GIF, SVG, WEBM, MP3, MP4 • Max 100MB
         </p>
 
@@ -56,45 +56,53 @@
             <polyline points="21 15 16 10 5 21" />
           </svg>
 
-          <p class="text-base sm:text-lg font-medium leading-relaxed">
+          <p
+            class="text-base sm:text-lg font-semibold leading-relaxed font-sans"
+          >
             Drag and Drop File <br />
-            <span class="text-gray-400 font-normal"
-              >or browse media on your device</span
-            >
+            <span class="text-gray-400 font-normal">
+              or browse media on your device
+            </span>
           </p>
 
-          <p id="fileName" class="text-pink-500 text-sm font-medium hidden"></p>
+          <p
+            id="fileName"
+            class="text-pink-500 text-sm font-medium font-sans hidden"
+          ></p>
         </div>
       </div>
 
-      <p id="error" class="text-sm font-medium text-red-500 hidden"></p>
+      <p
+        id="error"
+        class="text-sm font-medium text-red-500 font-sans hidden"
+      ></p>
 
       <div>
-        <label class="block mb-2 text-sm font-medium text-gray-300">
+        <label class="block mb-2 text-sm font-medium text-gray-300 font-sans">
           Name
         </label>
         <input
           id="name"
           type="text"
           placeholder="Item Name"
-          class="w-full bg-[#15151d] border border-gray-700 rounded-lg px-4 py-3 text-sm font-normal placeholder-gray-500 focus:outline-none focus:border-pink-500"
+          class="w-full bg-[#15151d] border border-gray-700 rounded-lg px-4 py-3 text-sm font-normal font-sans placeholder-gray-500 focus:outline-none focus:border-pink-500"
         />
       </div>
 
       <div>
-        <label class="block mb-2 text-sm font-medium text-gray-300">
+        <label class="block mb-2 text-sm font-medium text-gray-300 font-sans">
           Description
         </label>
         <textarea
           id="description"
           rows="4"
           placeholder="Description of your item"
-          class="w-full bg-[#15151d] border border-gray-700 rounded-lg px-4 py-3 text-sm font-normal placeholder-gray-500 focus:outline-none focus:border-pink-500"
+          class="w-full bg-[#15151d] border border-gray-700 rounded-lg px-4 py-3 text-sm font-normal font-sans placeholder-gray-500 focus:outline-none focus:border-pink-500"
         ></textarea>
       </div>
 
       <div>
-        <label class="block mb-2 text-sm font-medium text-gray-300">
+        <label class="block mb-2 text-sm font-medium text-gray-300 font-sans">
           Price
         </label>
         <div class="flex gap-4">
@@ -102,11 +110,11 @@
             id="price"
             type="number"
             placeholder="Enter Price"
-            class="flex-1 bg-[#15151d] border border-gray-700 rounded-lg px-4 py-3 text-sm font-normal placeholder-gray-500 focus:outline-none focus:border-pink-500"
+            class="flex-1 bg-[#15151d] border border-gray-700 rounded-lg px-4 py-3 text-sm font-normal font-sans placeholder-gray-500 focus:outline-none focus:border-pink-500"
           />
           <select
             id="currency"
-            class="bg-[#15151d] border border-gray-700 rounded-lg px-4 py-3 text-sm font-medium"
+            class="bg-[#15151d] border border-gray-700 rounded-lg px-4 py-3 text-sm font-medium font-sans"
           >
             <option value="ETH">ETH</option>
             <option value="BTC">BTC</option>
@@ -119,7 +127,7 @@
       <div class="flex justify-center md:justify-end">
         <button
           id="createBtn"
-          class="w-60 py-4 rounded-xl text-sm md:text-base font-semibold bg-pink-600 hover:bg-pink-700 transition"
+          class="w-60 py-4 rounded-xl text-sm md:text-base font-semibold font-sans bg-pink-600 hover:bg-pink-700 transition"
         >
           Create Item
         </button>
