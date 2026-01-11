@@ -1,0 +1,325 @@
+body{
+    background-color: #1B1A21;
+}
+nav{
+    padding-top: 20px;
+    padding-left: 26px; padding-right: 26px;
+}
+.navbar-main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.logo-container h3{
+    color: #FFFFFF;
+    margin-left: 3px;
+}
+.logo{
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(
+        45deg,
+        #EB1484,
+        #C91CC3,
+        #C81CC5
+    );
+}
+.logo img{
+    padding: 2px;
+}
+.ri-menu-line{
+    background: linear-gradient(
+        45deg,
+        #EB1484,
+        #C91CC3,
+        #C81CC5
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ri-search-line{
+    display: none;
+}
+.search-engine-container{
+    display: none;
+}
+.nav-menu-container{
+    display: none;
+}
+.nav-button-container{
+    display: none;
+}
+
+.footer-main-container{
+    padding-left: 26px; padding-right: 26px;
+}
+.footer-top{
+    display: none;
+}
+.footer-down{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.footer-down h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+.footer-icons{
+    color: #FFFFFF;
+}
+
+
+
+/* desktop */
+
+@media(min-width: 1024px) {
+
+
+    .ri-search-line{
+        display: block;
+    }
+    .search-engine-container{
+        display:block;
+    }
+    .nav-menu-container{
+        display: block;
+    }
+    .nav-button-container{
+        display: block;
+    }
+
+    .nav{
+        margin-top: 60px;
+        padding-left: 62px; padding-right: 62px;
+    }
+    .navbar-main-container{
+        padding-top: 40px;
+        padding-left: 10px; padding-right: 10px;
+    }
+    .logo{
+        width: 32px;
+        height: 32px;
+        opacity: 1;
+        border-radius: 10px;
+    }
+    .logo img{
+        width: 30px;
+        height: 30px;
+        padding-top: 3px;
+        padding-left: 4px;
+    }
+    .logo h3{
+        width: 95;
+        height: 17;
+        top: 8px;
+        left: 36px;
+        opacity: 1;
+
+    }
+    .haammberg{
+        display: none;
+    }
+    .ri-search-line{
+        color: #FFFFFF;
+        position: relative;
+         left: 10px;
+         top: 3px;
+    }
+    .nav-search{
+        width: 627px;
+        height: 40px;
+        gap: 8px;
+        opacity: 1;
+        border-radius: 10px;
+        padding-top: 7px;
+        padding-right: 19px;
+        padding-bottom: 7px;
+        padding-left: 15px;
+        background-color: #0d0d11;
+        margin-left: -30px;
+        
+
+    }
+    .nav-search::placeholder{
+        color: #FFFFFF;
+        padding-left: 20px;
+    }
+    .nav-menu-container a{
+        text-decoration: none;
+        color: #4F4F4F;
+        font-family: 'Poppins'sans-serif;
+        font-weight: 600px;
+        font-size: 16px;
+        line-height: 100%;
+        padding-right: 20px;
+    }
+    .nav-menu-container a:hover{
+        color: #FFFFFF;
+    }
+    .nav-btn-1{
+        margin-right: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600px;
+        font-size: 14px;
+        line-height: 100%;
+        width: 109px;
+        height: 40px;
+        border-radius: 10px;
+        color: #FFFFFF;
+        background: linear-gradient(
+        45deg,
+        #EB1484,
+        #C91CC3,
+        #C81CC5
+    );
+
+    }
+    .nav-btn-2{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600px;
+        font-size: 14px;
+        line-height: 100%;
+        width: 146px;
+        height: 40px;
+        border-radius: 10px;
+        background: linear-gradient(
+        45deg,
+        #EB1484,
+        #C91CC3,
+        #C81CC5
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .nav-btn-2 {
+        border: 1px solid;
+        border-radius: 10px;
+        border-image: linear-gradient(
+         90deg,
+        #EB1484,
+        #C91CC3,
+        #C81CC5
+         ) 1;
+    }
+
+
+    .footer-top{
+        display: block;
+    }
+    #footer-h3{
+        position: relative;
+         right: 57px;
+         bottom: 10px;
+    }
+    .footer-top-1 h3{
+        color: #FFFFFF;
+        width: 184px;
+        height: 24px;
+        margin-top: 25px;
+    }
+    .footer-top-1 input{
+        width: 283px;
+        height: 40px;
+        opacity: 1;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    .footer-search{
+        background-color: #0d0d11;
+    }
+    .footer-search::placeholder{
+        color: #FFFFFF;
+        padding-left: 15px;
+    }
+    .footer-search-container button{
+        color: #FFFFFF;
+        width: 130px;
+        height: 40px;
+        gap: 10px;
+        border-radius: 10px;
+        padding-top: 9px;
+        padding-right: 30px;
+        padding-bottom: 9px;
+        padding-left: 30px;
+        background: linear-gradient(
+        45deg,
+        #EB1484,
+        #C91CC3,
+        #C81CC5
+        );
+
+        position: relative;
+         right: 40px;
+
+    }
+
+    .footer-top-2 h3{
+        color: #FFFFFF;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600px;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+    .footer-top-2 h4{
+        color: #FFFFFF;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400px;
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 12px;
+    }
+
+    .footer-top-3 h3{
+        color: #FFFFFF;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600px;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+    .footer-top-3 h4{
+        color: #FFFFFF;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400px;
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 12px;
+    }
+
+    .footer-top{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+        padding-bottom: 64px;
+        padding-left: 255px;
+        padding-right: 255px;
+        margin-top: 60px;
+    }
+
+
+    
+    .footer-down{
+        border-top: 0.2px solid;
+        padding-top: 32px;
+    }
+    .footer-down h3{
+        font-weight: 600px;
+        font-size: 16px;
+    }
+    .footer-icons{
+        font-size: 25px;
+    }
+}
