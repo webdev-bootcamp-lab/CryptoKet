@@ -1,44 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRYPTO LIST ITEMS</title>
-    <link rel="stylesheet" href="item.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRYPTO LIST ITEMS</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="main">
-        <div class="image1">
-            <img src="item-images/Mask Group (1).svg" alt="list image">
-        </div>
-        <div class="hero-section-test">
-            <div class="abstact">
-                <p class="abstact-title">Abstact Smoke Red Blue</p>
-                <button><span>92</span></button>           
-            </div>
-            <div class="available-section">From <span>4.38ETH</span> - 25 of 125 available</div>
-            <div class="creater">Creator</div>
-            <div class="image2">
-                <img src="item-images/Mask Group.svg" alt="image of a lady">
-                <p class="mia-ayana">Mia Ayana</p>
-            </div>
-            <div class="links-section">
-                <a href="#">Details</a>
-                <a href="#">Offers</a>
-                <a href="#">History</a>
-            </div>
-            <p class="dummy-test">
-                Lorem Ipsum is simply dummy text of the printing <br>
-                and typesetting industry. Lorem Ipsum has been the <br>
-                industry's standard dummy text ever since the <br>
-                1500s, when an unknown printer took a galley of type <br>
-                and scrambled it to make a type specimen book
-            </p>
-            <div class="btn">
-                <button class="buy-for">Buy for 4.38 ETH</button>
-                <button class="make-offer">Make offer</button>
-            </div>
-        </div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+<body class="bg-[#2D2C2C] text-white font-[poppins]">
+  <div class="main lg:flex lg:gap-20
+              lg:border-y lg:border-[#44454b]">
+
+  <!-- IMAGE SECTION -->
+  <div class="image1">
+    <img 
+      src="item-images/Mask Group (1).svg"
+      class="w-[300px] ml-9 mt-8 pb-16 
+             md:w-[650px] md:ml-12 
+             lg:w-[500px] lg:mt-28"
+      alt="list image"
+    />
+  </div>
+
+  <!-- HERO SECTION -->
+  <div class="hero-section-test 
+              ml-8 border-t border-[#44454b] p-5
+              md:ml-16 md:mt-24
+              lg:ml-0 lg:mt-0
+              lg:border-t-0 lg:border-l lg:border-[#3a3a3e]
+              lg:pl-12">
+
+    <!-- TITLE + BUTTON -->
+    <div class="abstact flex items-center gap-5 md:gap-10 lg:gap-10 lg:mt-10">
+      <p class="abstact-title font-semibold text-[18px] mt-12
+                md:text-[35px]
+                lg:text-[30px] lg:mt-0">
+        Abstact Smoke Red Blue
+      </p>
+
+      <button
+        class="mt-11 w-[60px] h-[35px] border border-[#5f5e5e] 
+               rounded-full bg-transparent text-sm cursor-pointer
+               md:w-[130px] md:h-[65px] md:text-[32px]
+               lg:w-[100px] lg:h-[50px] lg:text-[30px] lg:mt-0">
+        <span class="ml-2 font-bold lg:text-[23px]">92</span>
+      </button>
     </div>
+
+    <!-- AVAILABLE -->
+    <div class="available-section text-[10px] mt-1 text-[#d2cdcd]
+                md:text-[18px] md:mt-3
+                lg:text-[16px] lg:mt-0">
+      From <span class="font-bold text-[#fff]">4.5ETH</span> - 20 of 25 available
+    </div>
+
+    <!-- CREATOR -->
+    <div class="creater mt-9 text-[#d2cdcd]
+                md:mt-14 md:text-[30px]
+                lg:text-[25px] lg:font-bold lg:mt-10">
+      Creator
+    </div>
+
+    <!-- CREATOR IMAGE -->
+    <div class="image2 mt-2 flex gap-4
+                md:mt-10 md:gap-5 lg:mt-2">
+      <img src="item-images/Mask Group.svg" class="md:w-[110px] lg:w-[60px]" alt="">
+      <p class="mia-ayana mt-5 font-semibold
+                md:mt-12 md:text-[30px]
+                lg:mt-5 lg:text-[16px] lg:font-bold">
+        Mia Ayana
+      </p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="links-section mt-8 border-b border-[#3a3a3e] pb-2
+                md:mt-12 lg:text-[10px]">
+      <a onclick="toggleContent('details', this)"
+         class="pr-3 py-2 font-semibold text-[#d4d3d3] hover:text-white 
+                hover:border-b hover:border-white cursor-pointer pt-[10px] pr-[2px] pb-[10px] pl-0
+                md:text-[35px] md:hover:border-b-2
+                lg:text-[23px] lg:hover:border-b-2">
+        Details
+      </a>
+      <a onclick="toggleContent('offers', this)"
+         class="pr-3 py-2 font-semibold text-[#d4d3d3] hover:text-white 
+                hover:border-b hover:border-white cursor-pointer pt-[10px] pr-[2px] pb-[10px] pl-0
+                md:text-[35px] md:hover:border-b-2
+                lg:text-[23px] lg:hover:border-b-2">
+        Offers
+      </a>
+      <a onclick="toggleContent('history', this)"
+         class="pr-3 py-2 font-semibold text-[#d4d3d3] hover:text-white 
+                hover:border-b hover:border-white cursor-pointer pt-[10px] pr-[2px] pb-[10px] pl-0
+                md:text-[35px] md:hover:border-b-2
+                lg:text-[23px] lg:hover:border-b-2">
+        History
+      </a>
+    </div>
+
+    <!-- TOGGLE CONTENT -->
+    <div id="details" class="content hidden mt-2 p-3 bg-[#272626] rounded text-[14px]
+                            md:text-[20px] lg:text-[20px]">
+      This is a short details dummy text for item page.
+    </div>
+
+    <div id="offers" class="content hidden mt-2 p-3 bg-[#272626] rounded text-[14px]
+                           md:text-[20px] lg:text-[20px]">
+      This is a short offers dummy text for item page.
+    </div>
+
+    <div id="history" class="content hidden mt-2 p-3 bg-[#272626] rounded text-[14px]
+                            md:text-[20px] lg:text-[20px]">
+      This is a short history dummy text for item page.
+    </div>
+
+    <!-- DESCRIPTION -->
+    <p class="dummy-test mt-8 text-[11px] leading-[22px]
+              md:mt-16 md:text-[24px] md:leading-[43px]
+              lg:text-[17px] lg:leading-[30px] lg:mt-10">
+      Lorem Ipsum is simply dummy text of the printing <br>
+      and typesetting industry. Lorem Ipsum has been the <br>
+      industry's standard dummy text ever since the <br>
+      1500s, when an unknown printer took a galley of type <br>
+      and scrambled it to make a type specimen book
+    </p>
+
+    <!-- BUTTONS -->
+    <div class="btn mt-8 pb-8
+                md:mt-16 md:pb-12
+                lg:mt-10">
+
+      <button
+  class="w-[120px] h-[35px] rounded-lg
+         bg-gradient-to-r from-[#EB1484] to-[#C91CC3]
+         text-white font-semibold text-[12px]
+         cursor-pointer transition-all duration-300
+         hover:from-[#ff3d9b] hover:to-[#e642d4]
+         hover:-translate-y-[2px] hover:shadow-lg
+
+         md:w-[250px] md:h-[55px] md:text-[22px]
+         lg:w-[190px] lg:text-[16px]">
+  Buy for 4.5 ETH
+</button>
+
+
+      <button
+  class="w-[120px] h-[35px] ml-5 rounded-lg p-[2px]
+         bg-gradient-to-r from-[#EB1484] to-[#ee34e5]
+         cursor-pointer transition-all duration-300
+         hover:from-[#ff3da1] hover:to-[#ff6af0]
+
+         md:w-[250px] md:h-[55px] md:ml-10 md:text-[25px]
+         lg:w-[190px] lg:text-[16px]">
+
+  <span
+    class="flex items-center justify-center w-full h-full
+           rounded-md bg-[#2D2C2C]
+           text-[#d9418f] font-semibold
+           transition-all duration-300
+           hover:text-white hover:bg-[#1f1f1f]">
+    Make offer
+  </span>
+</button>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- TOGGLE SCRIPT -->
+<script>
+function toggleContent(id, el) {
+  const contents = document.querySelectorAll('.content');
+  contents.forEach(c => c.classList.add('hidden'));
+
+  const target = document.getElementById(id);
+  target.classList.toggle('hidden');
+}
+</script>
+
 </body>
 </html>
