@@ -35,7 +35,7 @@
               lg:pl-12">
 
     <!-- TITLE + BUTTON -->
-    <div class="abstact flex items-center gap-5 md:gap-10 lg:gap-10 lg:mt-10">
+        <div class="abstact flex items-center gap-5 md:gap-10 lg:gap-10 lg:mt-10 font-[Poppins]">
       <p class="abstact-title font-semibold text-[18px] mt-12
                 md:text-[35px]
                 lg:text-[30px] lg:mt-0">
@@ -52,7 +52,7 @@
     </div>
 
     <!-- AVAILABLE -->
-    <div class="available-section text-[10px] mt-1 text-[#d2cdcd]
+    <div class="available-section text-[10px] mt-1 text-[#d2cdcd] font-[Poppins]
                 md:text-[18px] md:mt-3
                 lg:text-[16px] lg:mt-0">
       From <span class="font-bold text-[#fff]">4.5ETH</span> - 20 of 25 available
@@ -77,30 +77,47 @@
     </div>
 
     <!-- LINKS -->
-    <div class="links-section mt-8 border-b border-[#3a3a3e] pb-2
+    <div class="links-section mt-8 border-b border-[#3a3a3e] pb-2 font-[Poppins]
                 md:mt-12 lg:text-[10px]">
-      <a onclick="toggleContent('details', this)"
-         class="pr-3 py-2 font-semibold text-[#d4d3d3] hover:text-white 
-                hover:border-b hover:border-white cursor-pointer pt-[10px] pr-[2px] pb-[10px] pl-0
-                md:text-[35px] md:hover:border-b-2
-                lg:text-[23px] lg:hover:border-b-2">
-        Details
-      </a>
-      <a onclick="toggleContent('offers', this)"
-         class="pr-3 py-2 font-semibold text-[#d4d3d3] hover:text-white 
-                hover:border-b hover:border-white cursor-pointer pt-[10px] pr-[2px] pb-[10px] pl-0
-                md:text-[35px] md:hover:border-b-2
-                lg:text-[23px] lg:hover:border-b-2">
-        Offers
-      </a>
-      <a onclick="toggleContent('history', this)"
-         class="pr-3 py-2 font-semibold text-[#d4d3d3] hover:text-white 
-                hover:border-b hover:border-white cursor-pointer pt-[10px] pr-[2px] pb-[10px] pl-0
-                md:text-[35px] md:hover:border-b-2
-                lg:text-[23px] lg:hover:border-b-2">
-        History
-      </a>
-    </div>
+
+  <a onclick="toggleContent('details', this)"
+     class="tab-link pr-3 py-2 font-semibold text-[#d4d3d3]
+            cursor-pointer
+            border-b-2 border-transparent
+            pt-[10px] pr-[2px] pb-[10px] pl-0
+            transition-all duration-200
+            hover:text-white hover:border-white
+            md:text-[35px] md:hover:border-b-2
+            lg:text-[23px] lg:hover:border-b-2">
+    Details
+  </a>
+
+  <a onclick="toggleContent('offers', this)"
+     class="tab-link pr-3 py-2 font-semibold text-[#d4d3d3]
+            cursor-pointer
+            border-b-2 border-transparent
+            pt-[10px] pr-[2px] pb-[10px] pl-0
+            transition-all duration-200
+            hover:text-white hover:border-white
+            md:text-[35px] md:hover:border-b-2
+            lg:text-[23px] lg:hover:border-b-2">
+    Offers
+  </a>
+
+  <a onclick="toggleContent('history', this)"
+     class="tab-link pr-3 py-2 font-semibold text-[#d4d3d3]
+            cursor-pointer
+            border-b-2 border-transparent
+            pt-[10px] pr-[2px] pb-[10px] pl-0
+            transition-all duration-200
+            hover:text-white hover:border-white
+            md:text-[35px] md:hover:border-b-2
+            lg:text-[23px] lg:hover:border-b-2">
+    History
+  </a>
+
+</div>
+
 
     <!-- TOGGLE CONTENT -->
     <div id="details" class="content hidden mt-2 p-3 bg-[#272626] rounded text-[14px]
@@ -119,7 +136,7 @@
     </div>
 
     <!-- DESCRIPTION -->
-    <p class="dummy-test mt-8 text-[11px] leading-[22px]
+    <p class="dummy-test mt-8 text-[11px] leading-[22px] font-[Poppins]
               md:mt-16 md:text-[24px] md:leading-[43px]
               lg:text-[17px] lg:leading-[30px] lg:mt-10">
       Lorem Ipsum is simply dummy text of the printing <br>
@@ -175,13 +192,26 @@
 <!-- TOGGLE SCRIPT -->
 <script>
 function toggleContent(id, el) {
-  const contents = document.querySelectorAll('.content');
-  contents.forEach(c => c.classList.add('hidden'));
 
-  const target = document.getElementById(id);
-  target.classList.toggle('hidden');
+  //remove active from all tabs
+  document.querySelectorAll('.tab-link').forEach(link => {
+    link.classList.remove('text-white', 'border-white');
+    link.classList.add('text-[#d4d3d3]', 'border-transparent');
+  });
+
+  // activate clicked tab
+  el.classList.add('text-white', 'border-white');
+
+  // hide all content
+  document.querySelectorAll('.content').forEach(c => {
+    c.classList.add('hidden');
+  });
+
+  //show selected content
+  document.getElementById(id).classList.remove('hidden');
 }
 </script>
+
 
 </body>
 </html>
