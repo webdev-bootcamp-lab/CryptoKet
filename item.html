@@ -172,6 +172,72 @@
         //show selected content
         document.getElementById(id).classList.remove("hidden");
       }
+
+      
+  // CREATE MODAL
+  const modalWrapper = document.createElement("div");
+  modalWrapper.className =
+    "fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden";
+
+  modalWrapper.innerHTML = `
+    <div class="bg-[#26262b] w-[90%] max-w-[420px] rounded-2xl p-6 text-white font-[Poppins]">
+      
+      <h2 class="text-center text-lg font-semibold mb-6">Check Out</h2>
+
+      <div class="flex justify-between text-sm text-gray-400 mb-3">
+        <span>Item</span>
+        <span>Subtotal</span>
+      </div>
+
+      <div class="flex justify-between items-center mb-5">
+        <div class="flex items-center gap-3">
+          <img src="./src/assets/images/item-images/Mask Group (1).svg"
+               class="w-12 h-12 rounded-md object-cover" />
+          <div>
+            <p class="font-semibold text-sm">Mia Ayana</p>
+            <p class="text-xs text-gray-400">Abstract Smoke Red Blue</p>
+          </div>
+        </div>
+        <p class="font-semibold text-sm">4.5 ETH</p>
+      </div>
+
+      <div class="flex justify-between font-semibold text-sm border-t border-[#3a3a3e] pt-4 mb-6">
+        <span>Total</span>
+        <span>4.5 ETH</span>
+      </div>
+
+      <div class="flex justify-center gap-4">
+        <button id="confirmCheckout"
+          class="px-6 py-2 rounded-md bg-gradient-to-r from-[#EB1484] to-[#C91CC3] text-sm font-semibold">
+          Checkout
+        </button>
+
+        <button id="closeModal"
+          class="px-6 py-2 rounded-md border border-[#EB1484] text-[#EB1484] text-sm font-semibold">
+          Cancel
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modalWrapper);
+
+  // OPEN MODAL
+  const buyBtn = document.querySelector("button.bg-gradient-to-r");
+  buyBtn.addEventListener("click", () => {
+    modalWrapper.classList.remove("hidden");
+  });
+
+  // CLOSE MODAL
+  modalWrapper.addEventListener("click", (e) => {
+    if (e.target === modalWrapper) {
+      modalWrapper.classList.add("hidden");
+    }
+  });
+
+  document.getElementById("closeModal").addEventListener("click", () => {
+    modalWrapper.classList.add("hidden");
+  });
     </script>
   </body>
 </html>
