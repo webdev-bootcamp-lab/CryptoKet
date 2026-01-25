@@ -6,6 +6,18 @@
   <title>Profile Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script> 
 </head>
 <body class="bg-[#24262B]">
 
@@ -167,9 +179,16 @@
 
   </div>
 
-  <div class="flex items-center justify-center pt-16 ">
-    <button class="px-28 py-2 border-2 border-transparent [border-image:linear-gradient(90deg,#EB1484,#C91CC3,#C81CC5,#C81CC5)_1] text-pink-600 font-bold rounded-lg">Load More</button>
+  
+
+  <div class="flex items-center justify-center pt-16">
+  <div class="p-[2px] rounded-xl bg-gradient-to-r from-[#EB1484] via-[#C91CC3] to-[#C81CC5]">
+    <button class="px-28 py-2 bg-[#1F2128] text-pink-500 font-bold rounded-xl">
+      Load More
+    </button>
   </div>
+</div>
+
 </section>
 
 
