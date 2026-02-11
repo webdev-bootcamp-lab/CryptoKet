@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script> 
+</head>
+<body class="bg-[#24262B]">
+
+  <!-- Banner Section -->
+  <div class="relative w-full h-[260px]">
+    <img
+      src="Mask Groupr.png"
+      alt="Banner"
+      class="w-full h-full object-cover"
+    />
+
+    <!-- Avatar -->
+    <div class="absolute left-1/2 -bottom-16 transform -translate-x-1/2">
+      <div class="w-32 h-32 rounded-full border-4 border-gray-600 overflow-hidden bg-white">
+        <img
+          src="src/assets/images/item-images/Mask Group.svg"
+          alt="Profile"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Name Section -->
+  <div class=" pt-20 pb-8 text-center">
+    <h2 class="text-white text-xl font-semibold">
+      Mia Ayana
+    </h2>
+  </div>
+        
+      <!-- Marketplace Section -->
+<section class=" px-6 md:px-40 py-8">
+
+  <!-- Top Controls -->
+  <div class="flex flex-col md:flex-row gap-4 md:gap-6 mb-8">
+    
+    <!-- Search -->
+    <div class="flex items-center bg-[#1B1A21] rounded-xl px-4 py-3 flex-1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 21l-4.35-4.35m1.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input
+        type="text"
+        placeholder="Search Item Here"
+        class="bg-transparent outline-none text-sm text-gray-300 w-full placeholder-gray-400"
+      />
+    </div>
+
+    <!-- Filter -->
+    <div class="bg-[#1B1A21] rounded-xl px-5 py-3 flex items-center justify-between w-full md:w-56 cursor-pointer">
+      <span class="text-gray-300 text-sm">Recently Listed</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Card -->
+    <div class="bg-[#2A2D36] rounded-2xl p-3">
+      <img src="src/assets/images/hotbid/hotbid1.png"
+           class="rounded-xl h-50 w-full object-cover" />
+      <div class="mt-4">
+        <h3 class="text-white text-sm font-medium">Abstract Smoke Red Blue</h3>
+        <div class="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>1.25 ETH</span>
+          <span>92</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#2A2D36] rounded-2xl p-3">
+      <img src="src/assets/images/hotbid/hotbid2.png"
+           class="rounded-xl h-50 w-full object-cover" />
+      <div class="mt-4">
+        <h3 class="text-white text-sm font-medium">Mountain Landscape</h3>
+        <div class="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>0.20 ETH</span>
+          <span>25</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#2A2D36] rounded-2xl p-3">
+      <img src="src/assets/images/hotbid/hotbid3.png"
+           class="rounded-xl h-50 w-full object-cover" />
+      <div class="mt-4">
+        <h3 class="text-white text-sm font-medium">Paint Color on Wall</h3>
+        <div class="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>0.00 ETH</span>
+          <span>84</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#2A2D36] rounded-2xl p-3">
+      <img src="src/assets/images/hotbid/hotbid4.png"
+           class="rounded-xl h-50 w-full object-cover" />
+      <div class="mt-4">
+        <h3 class="text-white text-sm font-medium">Abstract Pattern</h3>
+        <div class="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>0.87 ETH</span>
+          <span>82</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#2A2D36] rounded-2xl p-3">
+      <img src="src/assets/images/hotbid/hotbid5.png"
+           class="rounded-xl h-50 w-full object-cover" />
+      <div class="mt-4">
+        <h3 class="text-white text-sm font-medium">White Line Grafiti</h3>
+        <div class="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>0.09 ETH</span>
+          <span>22</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#2A2D36] rounded-2xl p-3">
+      <img src="src/assets/images/hotbid/hotbid6.png"
+           class="rounded-xl h-50 w-full object-cover" />
+      <div class="mt-4">
+        <h3 class="text-white text-sm font-medium">Abstract Triangle</h3>
+        <div class="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>0.90 ETH</span>
+          <span>71</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#2A2D36] rounded-2xl p-3">
+      <img src="src/assets/images/hotbid/hotbid7.png"
+           class="rounded-xl h-50 w-full object-cover" />
+      <div class="mt-4">
+        <h3 class="text-white text-sm font-medium">Lake Landscape</h3>
+        <div class="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>0.52 ETH</span>
+          <span>63</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#2A2D36] rounded-2xl p-3">
+      <img src="src/assets/images/hotbid/hotbid8.png"
+           class="rounded-xl h-50 w-full object-cover" />
+      <div class="mt-4">
+        <h3 class="text-white text-sm font-medium">Blue Red Art</h3>
+        <div class="flex justify-between items-center mt-2 text-xs text-gray-400">
+          <span>0.85 ETH</span>
+          <span>66</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+
+  <div class="flex items-center justify-center pt-16">
+  <div class="p-[2px] rounded-xl bg-gradient-to-r from-[#EB1484] via-[#C91CC3] to-[#C81CC5]">
+    <button class="px-28 py-2 bg-[#1F2128] text-pink-500 font-bold rounded-xl">
+      Load More
+    </button>
+  </div>
+</div>
+
+</section>
+
+
+</body>
+</html>
